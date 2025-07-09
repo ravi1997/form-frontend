@@ -5,16 +5,48 @@ import QuestionRenderer from './QuestionRenderer';
 import { useNavigate } from 'react-router-dom';
 
 /* ── Utils ───────────────────────────── */
-function evaluateVisibility(condition, values) {
+function evaluateVisibility(condition, formData, _id, form) {
+    if (!condition || !_id) return true;
+
     try {
-        if (!condition) return true;
+        const version = form.versions.at(-1);
+
+        // 1. Build a variableName -> sectionId.questionId map
+        const variableMap = {};
+        for (const section of version.sections) {
+            for (const question of section.questions) {
+                const variable = question.meta_data?.variable_name;
+                if (variable) {
+                    variableMap[variable] = `${section.id}.${question.id}`;
+                }
+            }
+        }
+
+        // 2. Extract all variables from the condition
+        const variables = Array.from(new Set(condition.match(/\b[a-zA-Z_][a-zA-Z0-9_]*\b/g)));
+
+        // 3. Build a value map to inject into the evaluator
+        const valueMap = {};
+        for (const variable of variables) {
+            const key = variableMap[variable];
+            if (key && key in formData) {
+                valueMap[variable] = formData[key];
+            } else {
+                valueMap[variable] = undefined; // or null if preferred
+            }
+        }
+
+        console.log("Evaluating visibility condition:", condition,valueMap);
+
+        // 4. Evaluate condition with extracted values
         const func = new Function("values", `with (values) { return (${condition}); }`);
-        return func(values);
+        return func(valueMap);
     } catch (err) {
         console.warn("Visibility condition error:", err);
         return true;
     }
 }
+
 
 function getFieldKey(sectionId, question) {
     return question.meta_data?.variable_name || `${sectionId}.${question.id}`;
@@ -32,7 +64,7 @@ const ZigZagGrid = ({ questions, formData, handleInputChange, sectionId, setValu
 
     questions.forEach((q, i) => {
         const key = getFieldKey(sectionId, q);
-        const visible = evaluateVisibility(q.visibility_condition, formData);
+        const visible = evaluateVisibility(q.visibility_condition, formData, q.id,form);
         const field = visible ? (
             <QuestionRenderer
                 key={q.id}
@@ -170,7 +202,7 @@ export default function FormRenderer({
     const renderQuestions = (section) => {
         return section.questions.map(q => {
             const key = getFieldKey(section.id, q);
-            if (!evaluateVisibility(q, formData)) return null;
+            if (!evaluateVisibility(q.visibility_condition, formData, key, form)) return null;
 
             return (
                 <QuestionRenderer
