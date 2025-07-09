@@ -1,0 +1,1828 @@
+api responses:
+{
+  "log": {
+    "version": "1.2",
+    "creator": {
+      "name": "Firefox",
+      "version": "139.0.4"
+    },
+    "browser": {
+      "name": "Firefox",
+      "version": "139.0.4"
+    },
+    "pages": [
+      {
+        "id": "page_2",
+        "pageTimings": {
+          "onContentLoad": -13879,
+          "onLoad": -13279
+        },
+        "startedDateTime": "2025-07-09T09:42:38.118+05:30",
+        "title": "http://localhost:5173/"
+      }
+    ],
+    "entries": [
+      {
+        "startedDateTime": "2025-07-09T09:42:38.118+05:30",
+        "request": {
+          "bodySize": 0,
+          "method": "GET",
+          "url": "https://rpcapplication.aiims.edu/form/api/v1/form/dc8e18b4-b0ad-4b76-a4c5-cd340f84d494/history?question_id=ef3b47a9-8502-4866-bc71-81a658653a66&primary_value=106553932",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "rpcapplication.aiims.edu"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Referer",
+              "value": "http://localhost:5173/"
+            },
+            {
+              "name": "Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Cookie",
+              "value": "access_token_cookie=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "cross-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=0"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "access_token_cookie",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            }
+          ],
+          "queryString": [
+            {
+              "name": "question_id",
+              "value": "ef3b47a9-8502-4866-bc71-81a658653a66"
+            },
+            {
+              "name": "primary_value",
+              "value": "106553932"
+            }
+          ],
+          "headersSize": 931
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 09 Jul 2025 04:12:41 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "name": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "application/json",
+            "size": 139,
+            "text": "{\n  \"data\": [\n    {\n      \"_id\": \"02a6bf53-01de-4cf7-b5c8-ed977bce522c\",\n      \"submitted_at\": \"Mon, 30 Jun 2025 10:44:12 GMT\"\n    }\n  ]\n}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 268,
+          "bodySize": 412
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 141,
+          "receive": 0
+        },
+        "time": 141,
+        "_securityState": "secure",
+        "serverIPAddress": "14.139.245.48",
+        "connection": "443",
+        "pageref": "page_2"
+      },
+      {
+        "startedDateTime": "2025-07-09T09:42:38.324+05:30",
+        "request": {
+          "bodySize": 0,
+          "method": "GET",
+          "url": "https://rpcapplication.aiims.edu/form/api/v1/form/dc8e18b4-b0ad-4b76-a4c5-cd340f84d494/section/066a9d47-cca7-4bd8-bed4-1eaf544e649b/question/ef3b47a9-8502-4866-bc71-81a658653a66/api?value=106553932",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "rpcapplication.aiims.edu"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Referer",
+              "value": "http://localhost:5173/"
+            },
+            {
+              "name": "Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Cookie",
+              "value": "access_token_cookie=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "cross-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=4"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "access_token_cookie",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            }
+          ],
+          "queryString": [
+            {
+              "name": "value",
+              "value": "106553932"
+            }
+          ],
+          "headersSize": 961
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 09 Jul 2025 04:12:41 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "name": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "application/json",
+            "size": 317,
+            "text": "{\n  \"data\": {\n    \"dob\": \"1996-02-28\",\n    \"gender\": \"Male\",\n    \"mobile_no\": \"9899378106\",\n    \"p_address\": \"G-3/43 IST FLOOR MODEL TOWN^^^10^^^91^\",\n    \"p_fname\": \"RAVINDER SINGH \",\n    \"p_lname\": \"RAVINDER SINGH \",\n    \"p_mname\": \"\",\n    \"reg_date\": \"2023-02-28T04:41:48.809+00:00\",\n    \"uhid\": \"106553932\"\n  }\n}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 268,
+          "bodySize": 497
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 324,
+          "receive": 0
+        },
+        "time": 324,
+        "_securityState": "secure",
+        "serverIPAddress": "14.139.245.48",
+        "connection": "443",
+        "pageref": "page_2"
+      },
+      {
+        "startedDateTime": "2025-07-09T09:42:50.375+05:30",
+        "request": {
+          "bodySize": 11,
+          "method": "POST",
+          "url": "https://rpcapplication.aiims.edu/form/api/v1/form/dc8e18b4-b0ad-4b76-a4c5-cd340f84d494/responses",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "rpcapplication.aiims.edu"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json, text/plain, */*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Content-Length",
+              "value": "11"
+            },
+            {
+              "name": "Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Referer",
+              "value": "http://localhost:5173/"
+            },
+            {
+              "name": "Cookie",
+              "value": "access_token_cookie=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "cross-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=0"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "access_token_cookie",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            }
+          ],
+          "queryString": [],
+          "headersSize": 943,
+          "postData": {
+            "mimeType": "application/json",
+            "params": [],
+            "text": "{\"data\":{}}"
+          }
+        },
+        "response": {
+          "status": 422,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 09 Jul 2025 04:12:53 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "content-length",
+              "value": "194"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "application/json",
+            "size": 194,
+            "text": "{\n  \"details\": [\n    {\n      \"error\": \"Expected a list of entries for repeatable section\",\n      \"section_id\": \"1d13d20d-f2b0-4c02-a923-4280cf2fa2c5\"\n    }\n  ],\n  \"error\": \"Validation failed\"\n}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 248,
+          "bodySize": 442
+        },
+        "cache": {},
+        "timings": {
+          "blocked": -1,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 68,
+          "receive": 0
+        },
+        "time": 68,
+        "_securityState": "secure",
+        "serverIPAddress": "14.139.245.48",
+        "connection": "443",
+        "pageref": "page_2"
+      },
+      {
+        "startedDateTime": "2025-07-09T09:42:50.378+05:30",
+        "request": {
+          "bodySize": 0,
+          "method": "OPTIONS",
+          "url": "https://rpcapplication.aiims.edu/form/api/v1/form/dc8e18b4-b0ad-4b76-a4c5-cd340f84d494/responses",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "rpcapplication.aiims.edu"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Access-Control-Request-Method",
+              "value": "POST"
+            },
+            {
+              "name": "Access-Control-Request-Headers",
+              "value": "content-type"
+            },
+            {
+              "name": "Referer",
+              "value": "http://localhost:5173/"
+            },
+            {
+              "name": "Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "cross-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=4"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [],
+          "queryString": [],
+          "headersSize": 556
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 09 Jul 2025 04:12:53 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "text/html; charset=utf-8"
+            },
+            {
+              "name": "content-length",
+              "value": "9"
+            },
+            {
+              "name": "allow",
+              "value": "DELETE, HEAD, POST, OPTIONS, GET"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "access-control-allow-headers",
+              "value": "content-type"
+            },
+            {
+              "name": "access-control-allow-methods",
+              "value": "DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "name": "content-encoding",
+              "value": "zstd"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "text/html; charset=utf-8",
+            "size": 0,
+            "text": ""
+          },
+          "redirectURL": "",
+          "headersSize": 439,
+          "bodySize": 448
+        },
+        "cache": {},
+        "timings": {
+          "blocked": -1,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 8,
+          "receive": 0
+        },
+        "time": 8,
+        "_securityState": "secure",
+        "serverIPAddress": "14.139.245.48",
+        "connection": "443",
+        "pageref": "page_2"
+      }
+    ]
+  }
+}
+
+
+{
+  "log": {
+    "version": "1.2",
+    "creator": {
+      "name": "Firefox",
+      "version": "139.0.4"
+    },
+    "browser": {
+      "name": "Firefox",
+      "version": "139.0.4"
+    },
+    "pages": [
+      {
+        "id": "page_3",
+        "pageTimings": {
+          "onContentLoad": -13879,
+          "onLoad": -13279
+        },
+        "startedDateTime": "2025-07-09T09:42:38.118+05:30",
+        "title": "http://localhost:5173/"
+      }
+    ],
+    "entries": [
+      {
+        "startedDateTime": "2025-07-09T09:42:38.118+05:30",
+        "request": {
+          "bodySize": 0,
+          "method": "GET",
+          "url": "https://rpcapplication.aiims.edu/form/api/v1/form/dc8e18b4-b0ad-4b76-a4c5-cd340f84d494/history?question_id=ef3b47a9-8502-4866-bc71-81a658653a66&primary_value=106553932",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "rpcapplication.aiims.edu"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Referer",
+              "value": "http://localhost:5173/"
+            },
+            {
+              "name": "Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Cookie",
+              "value": "access_token_cookie=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "cross-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=0"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "access_token_cookie",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            }
+          ],
+          "queryString": [
+            {
+              "name": "question_id",
+              "value": "ef3b47a9-8502-4866-bc71-81a658653a66"
+            },
+            {
+              "name": "primary_value",
+              "value": "106553932"
+            }
+          ],
+          "headersSize": 931
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 09 Jul 2025 04:12:41 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "name": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "application/json",
+            "size": 139,
+            "text": "{\n  \"data\": [\n    {\n      \"_id\": \"02a6bf53-01de-4cf7-b5c8-ed977bce522c\",\n      \"submitted_at\": \"Mon, 30 Jun 2025 10:44:12 GMT\"\n    }\n  ]\n}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 268,
+          "bodySize": 412
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 141,
+          "receive": 0
+        },
+        "time": 141,
+        "_securityState": "secure",
+        "serverIPAddress": "14.139.245.48",
+        "connection": "443",
+        "pageref": "page_3"
+      },
+      {
+        "startedDateTime": "2025-07-09T09:42:38.324+05:30",
+        "request": {
+          "bodySize": 0,
+          "method": "GET",
+          "url": "https://rpcapplication.aiims.edu/form/api/v1/form/dc8e18b4-b0ad-4b76-a4c5-cd340f84d494/section/066a9d47-cca7-4bd8-bed4-1eaf544e649b/question/ef3b47a9-8502-4866-bc71-81a658653a66/api?value=106553932",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "rpcapplication.aiims.edu"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Referer",
+              "value": "http://localhost:5173/"
+            },
+            {
+              "name": "Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Cookie",
+              "value": "access_token_cookie=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "cross-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=4"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "access_token_cookie",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            }
+          ],
+          "queryString": [
+            {
+              "name": "value",
+              "value": "106553932"
+            }
+          ],
+          "headersSize": 961
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 09 Jul 2025 04:12:41 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "name": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "application/json",
+            "size": 317,
+            "text": "{\n  \"data\": {\n    \"dob\": \"1996-02-28\",\n    \"gender\": \"Male\",\n    \"mobile_no\": \"9899378106\",\n    \"p_address\": \"G-3/43 IST FLOOR MODEL TOWN^^^10^^^91^\",\n    \"p_fname\": \"RAVINDER SINGH \",\n    \"p_lname\": \"RAVINDER SINGH \",\n    \"p_mname\": \"\",\n    \"reg_date\": \"2023-02-28T04:41:48.809+00:00\",\n    \"uhid\": \"106553932\"\n  }\n}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 268,
+          "bodySize": 497
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 324,
+          "receive": 0
+        },
+        "time": 324,
+        "_securityState": "secure",
+        "serverIPAddress": "14.139.245.48",
+        "connection": "443",
+        "pageref": "page_3"
+      },
+      {
+        "startedDateTime": "2025-07-09T09:42:50.375+05:30",
+        "request": {
+          "bodySize": 11,
+          "method": "POST",
+          "url": "https://rpcapplication.aiims.edu/form/api/v1/form/dc8e18b4-b0ad-4b76-a4c5-cd340f84d494/responses",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "rpcapplication.aiims.edu"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json, text/plain, */*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Content-Length",
+              "value": "11"
+            },
+            {
+              "name": "Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Referer",
+              "value": "http://localhost:5173/"
+            },
+            {
+              "name": "Cookie",
+              "value": "access_token_cookie=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "cross-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=0"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "access_token_cookie",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            }
+          ],
+          "queryString": [],
+          "headersSize": 943,
+          "postData": {
+            "mimeType": "application/json",
+            "params": [],
+            "text": "{\"data\":{}}"
+          }
+        },
+        "response": {
+          "status": 422,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 09 Jul 2025 04:12:53 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "content-length",
+              "value": "194"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "application/json",
+            "size": 194,
+            "text": "{\n  \"details\": [\n    {\n      \"error\": \"Expected a list of entries for repeatable section\",\n      \"section_id\": \"1d13d20d-f2b0-4c02-a923-4280cf2fa2c5\"\n    }\n  ],\n  \"error\": \"Validation failed\"\n}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 248,
+          "bodySize": 442
+        },
+        "cache": {},
+        "timings": {
+          "blocked": -1,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 68,
+          "receive": 0
+        },
+        "time": 68,
+        "_securityState": "secure",
+        "serverIPAddress": "14.139.245.48",
+        "connection": "443",
+        "pageref": "page_3"
+      },
+      {
+        "startedDateTime": "2025-07-09T09:42:50.378+05:30",
+        "request": {
+          "bodySize": 0,
+          "method": "OPTIONS",
+          "url": "https://rpcapplication.aiims.edu/form/api/v1/form/dc8e18b4-b0ad-4b76-a4c5-cd340f84d494/responses",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "rpcapplication.aiims.edu"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Access-Control-Request-Method",
+              "value": "POST"
+            },
+            {
+              "name": "Access-Control-Request-Headers",
+              "value": "content-type"
+            },
+            {
+              "name": "Referer",
+              "value": "http://localhost:5173/"
+            },
+            {
+              "name": "Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "cross-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=4"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [],
+          "queryString": [],
+          "headersSize": 556
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 09 Jul 2025 04:12:53 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "text/html; charset=utf-8"
+            },
+            {
+              "name": "content-length",
+              "value": "9"
+            },
+            {
+              "name": "allow",
+              "value": "DELETE, HEAD, POST, OPTIONS, GET"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "access-control-allow-headers",
+              "value": "content-type"
+            },
+            {
+              "name": "access-control-allow-methods",
+              "value": "DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "name": "content-encoding",
+              "value": "zstd"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "text/html; charset=utf-8",
+            "size": 0,
+            "text": ""
+          },
+          "redirectURL": "",
+          "headersSize": 439,
+          "bodySize": 448
+        },
+        "cache": {},
+        "timings": {
+          "blocked": -1,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 8,
+          "receive": 0
+        },
+        "time": 8,
+        "_securityState": "secure",
+        "serverIPAddress": "14.139.245.48",
+        "connection": "443",
+        "pageref": "page_3"
+      }
+    ]
+  }
+}
+
+{
+  "log": {
+    "version": "1.2",
+    "creator": {
+      "name": "Firefox",
+      "version": "139.0.4"
+    },
+    "browser": {
+      "name": "Firefox",
+      "version": "139.0.4"
+    },
+    "pages": [
+      {
+        "id": "page_4",
+        "pageTimings": {
+          "onContentLoad": -13879,
+          "onLoad": -13279
+        },
+        "startedDateTime": "2025-07-09T09:42:38.118+05:30",
+        "title": "http://localhost:5173/"
+      }
+    ],
+    "entries": [
+      {
+        "startedDateTime": "2025-07-09T09:42:38.118+05:30",
+        "request": {
+          "bodySize": 0,
+          "method": "GET",
+          "url": "https://rpcapplication.aiims.edu/form/api/v1/form/dc8e18b4-b0ad-4b76-a4c5-cd340f84d494/history?question_id=ef3b47a9-8502-4866-bc71-81a658653a66&primary_value=106553932",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "rpcapplication.aiims.edu"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Referer",
+              "value": "http://localhost:5173/"
+            },
+            {
+              "name": "Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Cookie",
+              "value": "access_token_cookie=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "cross-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=0"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "access_token_cookie",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            }
+          ],
+          "queryString": [
+            {
+              "name": "question_id",
+              "value": "ef3b47a9-8502-4866-bc71-81a658653a66"
+            },
+            {
+              "name": "primary_value",
+              "value": "106553932"
+            }
+          ],
+          "headersSize": 931
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 09 Jul 2025 04:12:41 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "name": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "application/json",
+            "size": 139,
+            "text": "{\n  \"data\": [\n    {\n      \"_id\": \"02a6bf53-01de-4cf7-b5c8-ed977bce522c\",\n      \"submitted_at\": \"Mon, 30 Jun 2025 10:44:12 GMT\"\n    }\n  ]\n}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 268,
+          "bodySize": 412
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 141,
+          "receive": 0
+        },
+        "time": 141,
+        "_securityState": "secure",
+        "serverIPAddress": "14.139.245.48",
+        "connection": "443",
+        "pageref": "page_4"
+      },
+      {
+        "startedDateTime": "2025-07-09T09:42:38.324+05:30",
+        "request": {
+          "bodySize": 0,
+          "method": "GET",
+          "url": "https://rpcapplication.aiims.edu/form/api/v1/form/dc8e18b4-b0ad-4b76-a4c5-cd340f84d494/section/066a9d47-cca7-4bd8-bed4-1eaf544e649b/question/ef3b47a9-8502-4866-bc71-81a658653a66/api?value=106553932",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "rpcapplication.aiims.edu"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Referer",
+              "value": "http://localhost:5173/"
+            },
+            {
+              "name": "Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Cookie",
+              "value": "access_token_cookie=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "cross-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=4"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "access_token_cookie",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            }
+          ],
+          "queryString": [
+            {
+              "name": "value",
+              "value": "106553932"
+            }
+          ],
+          "headersSize": 961
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 09 Jul 2025 04:12:41 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "name": "content-encoding",
+              "value": "gzip"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "application/json",
+            "size": 317,
+            "text": "{\n  \"data\": {\n    \"dob\": \"1996-02-28\",\n    \"gender\": \"Male\",\n    \"mobile_no\": \"9899378106\",\n    \"p_address\": \"G-3/43 IST FLOOR MODEL TOWN^^^10^^^91^\",\n    \"p_fname\": \"RAVINDER SINGH \",\n    \"p_lname\": \"RAVINDER SINGH \",\n    \"p_mname\": \"\",\n    \"reg_date\": \"2023-02-28T04:41:48.809+00:00\",\n    \"uhid\": \"106553932\"\n  }\n}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 268,
+          "bodySize": 497
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 324,
+          "receive": 0
+        },
+        "time": 324,
+        "_securityState": "secure",
+        "serverIPAddress": "14.139.245.48",
+        "connection": "443",
+        "pageref": "page_4"
+      },
+      {
+        "startedDateTime": "2025-07-09T09:42:50.375+05:30",
+        "request": {
+          "bodySize": 11,
+          "method": "POST",
+          "url": "https://rpcapplication.aiims.edu/form/api/v1/form/dc8e18b4-b0ad-4b76-a4c5-cd340f84d494/responses",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "rpcapplication.aiims.edu"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json, text/plain, */*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Content-Length",
+              "value": "11"
+            },
+            {
+              "name": "Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Referer",
+              "value": "http://localhost:5173/"
+            },
+            {
+              "name": "Cookie",
+              "value": "access_token_cookie=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "cross-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=0"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "access_token_cookie",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MjAzNDM0NywianRpIjoiMDEyNzAxOWItYzBmNS00NDBiLTg2ZmEtNGQ3ODRmMzMxZDNiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ijc1YjIyYjRlLTM2MzctNDQ1ZC1hMWFkLTI4NzE1YzU1MWRjMyIsIm5iZiI6MTc1MjAzNDM0NywiZXhwIjoxNzUyMDM1MjQ3LCJyb2xlcyI6WyJ1c2VyIiwiYWRtaW4iLCJzdXBlcmFkbWluIl19.sl6doT6KTNXN5adziTY1zsnVd1V7kN-E6cRI0JSsGh4"
+            }
+          ],
+          "queryString": [],
+          "headersSize": 943,
+          "postData": {
+            "mimeType": "application/json",
+            "params": [],
+            "text": "{\"data\":{}}"
+          }
+        },
+        "response": {
+          "status": 422,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 09 Jul 2025 04:12:53 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "content-length",
+              "value": "194"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "application/json",
+            "size": 194,
+            "text": "{\n  \"details\": [\n    {\n      \"error\": \"Expected a list of entries for repeatable section\",\n      \"section_id\": \"1d13d20d-f2b0-4c02-a923-4280cf2fa2c5\"\n    }\n  ],\n  \"error\": \"Validation failed\"\n}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 248,
+          "bodySize": 442
+        },
+        "cache": {},
+        "timings": {
+          "blocked": -1,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 68,
+          "receive": 0
+        },
+        "time": 68,
+        "_securityState": "secure",
+        "serverIPAddress": "14.139.245.48",
+        "connection": "443",
+        "pageref": "page_4"
+      },
+      {
+        "startedDateTime": "2025-07-09T09:42:50.378+05:30",
+        "request": {
+          "bodySize": 0,
+          "method": "OPTIONS",
+          "url": "https://rpcapplication.aiims.edu/form/api/v1/form/dc8e18b4-b0ad-4b76-a4c5-cd340f84d494/responses",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "rpcapplication.aiims.edu"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Access-Control-Request-Method",
+              "value": "POST"
+            },
+            {
+              "name": "Access-Control-Request-Headers",
+              "value": "content-type"
+            },
+            {
+              "name": "Referer",
+              "value": "http://localhost:5173/"
+            },
+            {
+              "name": "Origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "cross-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=4"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [],
+          "queryString": [],
+          "headersSize": 556
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Wed, 09 Jul 2025 04:12:53 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "text/html; charset=utf-8"
+            },
+            {
+              "name": "content-length",
+              "value": "9"
+            },
+            {
+              "name": "allow",
+              "value": "DELETE, HEAD, POST, OPTIONS, GET"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "http://localhost:5173"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "access-control-allow-headers",
+              "value": "content-type"
+            },
+            {
+              "name": "access-control-allow-methods",
+              "value": "DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, Accept-Encoding"
+            },
+            {
+              "name": "content-encoding",
+              "value": "zstd"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "text/html; charset=utf-8",
+            "size": 0,
+            "text": ""
+          },
+          "redirectURL": "",
+          "headersSize": 439,
+          "bodySize": 448
+        },
+        "cache": {},
+        "timings": {
+          "blocked": -1,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 8,
+          "receive": 0
+        },
+        "time": 8,
+        "_securityState": "secure",
+        "serverIPAddress": "14.139.245.48",
+        "connection": "443",
+        "pageref": "page_4"
+      }
+    ]
+  }
+}
