@@ -10,33 +10,31 @@ function evaluateVisibility(condition, formData, _id, form) {
 
     try {
         const version = form.versions.at(-1);
+        const strippedCondition = condition.replace(/(['"`])(?:(?!\1|\\).|\\.)*\1/g, '');
 
-        // 1. Build a variableName -> sectionId.questionId map
-        const variableMap = {};
-        for (const section of version.sections) {
-            for (const question of section.questions) {
-                const variable = question.meta_data?.variable_name;
-                if (variable) {
-                    variableMap[variable] = `${section.id}.${question.id}`;
-                }
-            }
-        }
-
-        // 2. Extract all variables from the condition
-        const variables = Array.from(new Set(condition.match(/\b[a-zA-Z_][a-zA-Z0-9_]*\b/g)));
+        // 3. Extract identifiers that are not reserved words or numbers
+        const reserved = new Set([
+            'true', 'false', 'null', 'undefined', 'return', 'if', 'else', 'typeof', 'instanceof', 'new',
+            'let', 'const', 'var', 'function', 'with', 'while', 'for', 'do', 'switch', 'case', 'break',
+            'default', 'try', 'catch', 'finally', 'continue', 'delete', 'in', 'this'
+        ]);
+        const variables = Array.from(
+            new Set(
+                strippedCondition
+                    .match(/\b[a-zA-Z_][a-zA-Z0-9_]*\b/g)
+                    ?.filter(v => isNaN(v) && !reserved.has(v)) || []
+            )
+        );
 
         // 3. Build a value map to inject into the evaluator
         const valueMap = {};
         for (const variable of variables) {
-            const key = variableMap[variable];
-            if (key && key in formData) {
-                valueMap[variable] = formData[key];
+            if (variable && variable in formData) {
+                valueMap[variable] = formData[variable];
             } else {
                 valueMap[variable] = undefined; // or null if preferred
             }
         }
-
-        console.log("Evaluating visibility condition:", condition,valueMap);
 
         // 4. Evaluate condition with extracted values
         const func = new Function("values", `with (values) { return (${condition}); }`);
