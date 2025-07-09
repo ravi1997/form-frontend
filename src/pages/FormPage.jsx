@@ -4,6 +4,9 @@ import { getForm, submitResponse, getResponseById } from '../api/formApi';
 import { useNavigate } from 'react-router-dom';
 import FormRenderer from '../components/FormRenderer';
 
+import { useParams } from 'react-router-dom';
+
+
 function mapResponseToFormFormat(responseData) {
     const formData = {};
     const repeatData = {};
@@ -22,7 +25,8 @@ function mapResponseToFormFormat(responseData) {
 }
 
 export default function FormPage() {
-    const formId = 'dc8e18b4-b0ad-4b76-a4c5-cd340f84d494';
+    //const formId = 'dc8e18b4-b0ad-4b76-a4c5-cd340f84d494';
+    const { formId } = useParams();
     const [form, setForm] = useState(null);
     const [loading, setLoading] = useState(true);
     const [msg, setMsg] = useState('');

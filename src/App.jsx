@@ -11,6 +11,9 @@ import {
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import FormPage from './pages/FormPage';
+import FormHomePage from './pages/FormHomePage';
+import SettingsPage from './pages/SettingsPage';
+import TermsPage from './pages/TermsPage';
 import FormPreviewPage from './pages/FormPreview';
 
 function ProtectedRoute({ loggedIn, children }) {
@@ -29,51 +32,71 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-900 text-white p-4">
-        <Routes>
-          {/* Public Route */}
-          <Route
-            path="/"
-            element={
-              loggedIn ? (
-                <Navigate to="/home" replace />
-              ) : (
-                <LoginPage onLoginSuccess={() => setLoggedIn(true)} />
-              )
-            }
-          />
+<Routes>
+  {/* Public Login Route */}
+  <Route
+    path="/"
+    element={
+      loggedIn ? (
+        <Navigate to="/home" replace />
+      ) : (
+        <LoginPage onLoginSuccess={() => setLoggedIn(true)} />
+      )
+    }
+  />
 
-          {/* Protected Routes */}
-          <Route
-            path="/home"
-            element={
-              <ProtectedRoute loggedIn={loggedIn}>
-                <HomePage />
-              </ProtectedRoute>
-            }
-          />
+  {/* Protected Pages */}
+  <Route
+    path="/home"
+    element={
+      <ProtectedRoute loggedIn={loggedIn}>
+        <HomePage />
+      </ProtectedRoute>
+    }
+  />
 
-          <Route
-            path="/form/:formId"
-            element={
-              <ProtectedRoute loggedIn={loggedIn}>
-                <FormPage />
-              </ProtectedRoute>
-            }
-          />
+  {/* ✅ New route to show list of forms or allow selection */}
+  <Route
+    path="/forms"
+    element={
+      <ProtectedRoute loggedIn={loggedIn}>
+        <FormHomePage />
+      </ProtectedRoute>
+    }
+  />
 
-          <Route
-            path="/preview"
-            element={
-              <ProtectedRoute loggedIn={loggedIn}>
-                <FormPreviewPage />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
-      </div>
-    </Router>
+  {/* ✅ Existing route for specific form */}
+  <Route
+    path="/form/:formId"
+    element={
+      <ProtectedRoute loggedIn={loggedIn}>
+        <FormPage />
+      </ProtectedRoute>
+    }
+  />
+
+  <Route
+    path="/preview"
+    element={
+      <ProtectedRoute loggedIn={loggedIn}>
+        <FormPreviewPage />
+      </ProtectedRoute>
+    }
+  />
+  <Route path="/settings" element={
+    <ProtectedRoute loggedIn={loggedIn}>
+      <SettingsPage />
+    </ProtectedRoute>
+  } />
+
+  <Route path="/terms" element={
+    <ProtectedRoute loggedIn={loggedIn}>
+      <TermsPage />
+    </ProtectedRoute>
+  } />
+
+</Routes>
+
   );
 }
 

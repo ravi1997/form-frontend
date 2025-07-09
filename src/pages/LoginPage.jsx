@@ -11,7 +11,7 @@ export default function LoginPage({ onLoginSuccess }) {
         e.preventDefault();
         setError('');
         try {
-            await axios.post(
+            const res = await axios.post(
                 'https://rpcapplication.aiims.edu/form/api/v1/auth/login',
                 { email, password },
                 {
@@ -19,8 +19,13 @@ export default function LoginPage({ onLoginSuccess }) {
                     headers: { 'Content-Type': 'application/json' },
                 }
             );
+            const token = res.data.access_token;
+
+            // ⚠️ Not HttpOnly, use only if backend doesn't set cookie
+            document.cookie = `access_token=${token}; path=/; SameSite=Lax`;
             onLoginSuccess();
         } catch (err) {
+            console.error('Login error:', err);
             setError('🚫 Login failed. Please check your credentials.');
         }
     };
