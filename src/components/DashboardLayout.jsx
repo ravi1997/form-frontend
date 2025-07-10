@@ -54,7 +54,7 @@ const DashboardLayout = ({ children, tiles, user = { name: 'John Doe', avatar: '
             <main className="flex-1 p-4 sm:p-8">
                 {/* Header */}
                 <header className="flex flex-wrap items-center justify-between bg-white dark:bg-gray-800 rounded-lg shadow p-4 mb-8">
-                    <h1 className="text-2xl font-bold text-slate-800 dark:text-white">Welcome 👋</h1>
+                    <h1 className="text-2xl font-bold text-slate-800 dark:text-white">Welcome back, {user.name} 👋</h1>
                     <div className="flex items-center gap-4 mt-4 sm:mt-0">
                         <button
                             onClick={() => setDarkMode(!darkMode)}

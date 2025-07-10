@@ -56,3 +56,42 @@ export const getResponseById = async (formId, responseId) => {
         throw error;
     }
 };
+
+export const getHistoryByQuestionId = async (formId, questionId, primaryValue) => {
+    try {
+        const url = `${API_BASE}/${formId}/history`;
+        const res = await axios.get(url, {
+            params: {
+                question_id: questionId,
+                primary_value: primaryValue,
+            },
+            headers: {
+                'Content-Type': 'application/json',
+                ...authHeader(),
+            },
+            withCredentials: true,
+        });
+        return res.data;
+    } catch (error) {
+        console.error('❌ Error fetching history:', error);
+        throw error;
+    }
+};
+
+export const getQuestionApiData = async (formId, sectionId, questionId, value) => {
+    try {
+        const url = `${API_BASE}/${formId}/section/${sectionId}/question/${questionId}/api`;
+        const res = await axios.get(url, {
+            params: { value },
+            headers: {
+                'Content-Type': 'application/json',
+                ...authHeader(),
+            },
+            withCredentials: true,
+        });
+        return res.data?.data || res.data;
+    } catch (error) {
+        console.error('❌ Error fetching API question data:', error);
+        throw error;
+    }
+};

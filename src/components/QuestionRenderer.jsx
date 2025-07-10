@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { getHistoryByQuestionId,getQuestionApiData } from '../api/formApi'; // update the path if needed
 
 export default function QuestionRenderer({
     question,
@@ -65,30 +66,25 @@ export default function QuestionRenderer({
         setFetching(true);
         try {
             if (question.meta_data?.history === true) {
-                const url = `https://rpcapplication.aiims.edu/form/api/v1/form/${formId}/history?question_id=${questionId}&primary_value=${value}`;
-                const res = await fetch(url, { credentials: 'include' });
-                if (!res.ok) throw new Error('History fetch failed');
-                const data = await res.json();
+                const data = await getHistoryByQuestionId(formId, questionId, value);
                 historyhandleFetchComplete?.(data);
             }
+            
 
             if (question.field_api_call) {
-                const url = `https://rpcapplication.aiims.edu/form/api/v1/form/${formId}/section/${sectionId}/question/${questionId}/api?value=${value}`;
-                const res = await fetch(url, { credentials: 'include' });
-                if (!res.ok) throw new Error('API fetch failed');
-                const resp = await res.json();
-                const data = resp.data || resp;
-
+                const data = await getQuestionApiData(formId, sectionId, questionId, value);
+            
                 setFormData(prev => {
                     const updated = { ...prev, ...data };
                     Object.entries(data).forEach(([key, val]) => {
                         try {
                             setValue(key, val);
-                        } catch { }
+                        } catch {}
                     });
                     return updated;
                 });
             }
+            
         } catch (err) {
             console.error('❌ Fetch Error:', err);
             alert('Fetch failed');
