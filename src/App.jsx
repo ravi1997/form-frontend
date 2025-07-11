@@ -15,6 +15,10 @@ import FormHomePage from './pages/FormHomePage';
 import SettingsPage from './pages/SettingsPage';
 import TermsPage from './pages/TermsPage';
 import FormPreviewPage from './pages/FormPreview';
+import FormBuilderPage from './pages/builder/FormBuilderPage';
+import FormResponseHomePage from './pages/FormResponseHomePage';
+import FormResponsesPage from './pages/FormResponsesPage.jsx';
+import ViewResponsePage from './pages/ViewResponsePage.jsx';
 
 function ProtectedRoute({ loggedIn, children }) {
   const location = useLocation();
@@ -32,70 +36,102 @@ function App() {
   }, []);
 
   return (
-<Routes>
-  {/* Public Login Route */}
-  <Route
-    path="/"
-    element={
-      loggedIn ? (
-        <Navigate to="/home" replace />
-      ) : (
-        <LoginPage onLoginSuccess={() => setLoggedIn(true)} />
-      )
-    }
-  />
+    <Routes>
+      {/* Public Login Route */}
+      <Route
+        path="/"
+        element={
+          loggedIn ? (
+            <Navigate to="/home" replace />
+          ) : (
+            <LoginPage onLoginSuccess={() => setLoggedIn(true)} />
+          )
+        }
+      />
 
-  {/* Protected Pages */}
-  <Route
-    path="/home"
-    element={
-      <ProtectedRoute loggedIn={loggedIn}>
-        <HomePage />
-      </ProtectedRoute>
-    }
-  />
+      {/* Protected Pages */}
+      <Route
+        path="/home"
+        element={
+          <ProtectedRoute loggedIn={loggedIn}>
+            <HomePage />
+          </ProtectedRoute>
+        }
+      />
 
-  {/* ✅ New route to show list of forms or allow selection */}
-  <Route
-    path="/forms"
-    element={
-      <ProtectedRoute loggedIn={loggedIn}>
-        <FormHomePage />
-      </ProtectedRoute>
-    }
-  />
+      {/* ✅ New route to show list of forms or allow selection */}
+      <Route
+        path="/forms"
+        element={
+          <ProtectedRoute loggedIn={loggedIn}>
+            <FormHomePage />
+          </ProtectedRoute>
+        }
+      />
 
-  {/* ✅ Existing route for specific form */}
-  <Route
-    path="/form/:formId"
-    element={
-      <ProtectedRoute loggedIn={loggedIn}>
-        <FormPage />
-      </ProtectedRoute>
-    }
-  />
+      {/* ✅ Existing route for specific form */}
+      <Route
+        path="/form/:formId"
+        element={
+          <ProtectedRoute loggedIn={loggedIn}>
+            <FormPage />
+          </ProtectedRoute>
+        }
+      />
 
-  <Route
-    path="/preview"
-    element={
-      <ProtectedRoute loggedIn={loggedIn}>
-        <FormPreviewPage />
-      </ProtectedRoute>
-    }
-  />
-  <Route path="/settings" element={
-    <ProtectedRoute loggedIn={loggedIn}>
-      <SettingsPage />
-    </ProtectedRoute>
-  } />
+      {/* ✅ New route to show list of forms or allow selection */}
+      <Route
+        path="/formsResponse"
+        element={
+          <ProtectedRoute loggedIn={loggedIn}>
+            <FormResponseHomePage />
+          </ProtectedRoute>
+        }
+      />
 
-  <Route path="/terms" element={
-    <ProtectedRoute loggedIn={loggedIn}>
-      <TermsPage />
-    </ProtectedRoute>
-  } />
+      {/* ✅ Existing route for specific form */}
+      <Route
+        path="/formResponse/:formId"
+        element={
+          <ProtectedRoute loggedIn={loggedIn}>
+            <FormResponsesPage />
+          </ProtectedRoute>
+        }
+      />
 
-</Routes>
+
+
+      <Route
+        path="/preview"
+        element={
+          <ProtectedRoute loggedIn={loggedIn}>
+            <FormPreviewPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route path="/settings" element={
+        <ProtectedRoute loggedIn={loggedIn}>
+          <SettingsPage />
+        </ProtectedRoute>
+      } />
+
+      <Route path="/terms" element={
+        <ProtectedRoute loggedIn={loggedIn}>
+          <TermsPage />
+        </ProtectedRoute>
+      } />
+
+      <Route
+        path="/createform"
+        element={
+          <ProtectedRoute loggedIn={loggedIn}>
+            <FormBuilderPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route path="/form/:formId/response/:responseId" element={<ViewResponsePage />} />
+
+    </Routes>
 
   );
 }

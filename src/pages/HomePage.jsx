@@ -4,9 +4,10 @@ import DashboardLayout from '../components/DashboardLayout';
 import TileGrid from '../components/TileGrid';
 
 const tiles = [
+    { title: 'Create a new form', icon: '🆕', path: '/createform' },
     { title: 'Fill out your assigned forms', icon: '📝', path: '/forms' },
     { title: 'Resume partially filled forms', icon: '✍️', path: '/drafts' },
-    { title: 'View your previous responses', icon: '📊', path: '/responses' },
+    { title: 'View your previous responses', icon: '📊', path: '/formsResponse' },
     { title: 'Track your activity stats', icon: '📈', path: '/analytics' },
     { title: 'Manage your profile and password', icon: '⚙️', path: '/settings' },
     { title: 'Terms and privacy policy', icon: '📜', path: '/terms' },

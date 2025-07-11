@@ -95,3 +95,21 @@ export const getQuestionApiData = async (formId, sectionId, questionId, value) =
         throw error;
     }
 };
+
+
+// src/api/formApi.js
+
+export const getResponsesForForm = async (formId) => {
+    try {
+        const res = await axios.get(`${API_BASE}/${formId}/responses`, {
+            headers: {
+                'Content-Type': 'application/json',
+                ...authHeader(),
+            },
+        });
+        return res.data;
+    } catch (error) {
+        console.error('❌ Error fetching responses:', error);
+        throw error;
+    }
+};

@@ -30,7 +30,7 @@ const FormHomePage = () => {
           ← Back to Home
         </button>
       </div>
-      <FormGrid forms={dummyForms} />
+      <FormGrid forms={dummyForms} url={'/form'}/>
     </DashboardLayout>
   );
 };
