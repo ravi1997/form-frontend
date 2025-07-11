@@ -1,12 +1,14 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
+import plugin from 'tailwindcss/plugin';
+
 export default {
-  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        midnight: '#0E1528',          // card
+        midnight: '#0E1528',
         frosted: 'rgba(14,21,40,0.8)',
-        accentLo: '#16E4E8',          // button gradient
+        accentLo: '#16E4E8',
         accentHi: '#1FBED4',
       },
       boxShadow: {
@@ -15,6 +17,15 @@ export default {
       },
     },
   },
-  plugins: [],
-}
-
+  plugins: [
+    plugin(function ({ addBase }) {
+      addBase({
+        'html, :host': {
+          '-webkit-text-size-adjust': '100%',
+          '-ms-text-size-adjust': '100%',
+          'text-size-adjust': '100%',
+        },
+      });
+    }),
+  ],
+};

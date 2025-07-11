@@ -1,4 +1,3 @@
-// TileGrid.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,9 +10,9 @@ const TileGrid = ({ tiles }) => {
                 <div
                     key={idx}
                     onClick={() => navigate(tile.path)}
-                    className="cursor-pointer bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 hover:border-blue-500 shadow hover:shadow-lg p-6 rounded-lg transition"
+                    className="cursor-pointer bg-white dark:bg-midnight border border-slate-200 dark:border-gray-700 hover:border-accentHi shadow-md hover:shadow-glow p-6 rounded-xl transition-all duration-300"
                 >
-                    <div className="text-3xl mb-2">{tile.icon}</div>
+                    <div className="text-4xl mb-3">{tile.icon}</div>
                     <div className="text-lg font-semibold text-slate-800 dark:text-white">
                         {tile.title}
                     </div>
